@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	</head>
+	<body>
+	
+		<noscript>
+			Please enable js
+		</noscript>
+		<script>
+		var x=10;
+			var x=new Date();
+			var y=16;
+			console.error(x);
+			console.log(y);
+			if(y==='16'){
+				console.log("Y is 16");
+			}else{
+				console.log("Y is not 16");
+			}
+			
+			
+			for(var i=0;i<10;i++){
+				console.log("Hello "+i);
+			}
+			
+			var a=[1,2,3];
+			a['fg']=13
+			console.log(a);
+			console.log(a[4]);
+			
+			for(var i=0;i<a.length;i++){
+				console.log(a[i]);
+			}
+			
+			
+			for(var i in a){
+				console.log(a[i]);
+			}
+			
+			
+			function f1(){
+				console.log("F1 function called");
+				return 2;
+			}
+			
+			f1();
+			
+			console.log(f1());
+			var f2=function(abc){
+				console.log("F2 function called");
+				return abc*abc+4;
+			}
+			var x=7;
+			console.log(f2(x));
+			
+			
+			
+			var f3=function(fun){
+				console.log("F3 called");
+				return fun(4);
+			}
+			console.log(f3(f2));
+			
+			setTimeout(f1,5000);
+			
+			
+			setTimeout(function(){
+				console.log("Hello after 5 sec");
+			},5000);
+			
+			var x=[1,2,3,4,5];
+			
+			x.forEach(function(item,i){
+				console.log(i);
+			});
+			
+			for(var i in x){
+				console.log(i);
+			}
+			
+			
+			var y=[5,8,1,4,0];
+			
+			
+			var z=y.filter(function(item){
+			
+				return item>8;
+			
+			});
+			console.log(z);
+			
+			
+			var y2=y.map(function(item,i){
+				return item*item;
+			})
+			
+			
+			console.log(y2);
+			
+			
+			var sum=a.reduce(function(counter,value){ 
+				return counter+value;
+			},0);
+			
+			console.log(sum);
+			a.forEach(function(item){
+				console.log(item);
+			});
+			
+			
+			var a=[4,5,6,7,4,6,8,9];
+			
+			console.log(a.join("."));
+			
+			
+			
+		
+			
+			
+			
+			
+		</script>
+	</body>
+</html>

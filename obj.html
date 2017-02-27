@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	</head>
+	<body>
+	
+		<noscript>
+			Please enable js
+		</noscript>
+		<script>
+			var o={
+				a:function(){
+					return 0;
+				},
+				b:3,
+				c:"Fgh",
+				d:{
+					t:3,
+					r:9
+				},
+				e:new Date()
+			};
+			for(var i in o){
+				console.log(i,o[i])
+			}
+			
+		console.log('c' in o);
+			
+			var Car=function(model,price){
+				price=price||100;
+				return {
+					model:model,
+					price:price,
+					
+				};		
+			}
+			var cars=[];
+			cars.push(Car("maruti",800));
+			cars.push(Car("ford",400));
+			cars.push(Car("bmw",1800));
+			cars.push(Car("tata",700));
+			console.log(cars);
+			cars.forEach(function(car){
+				console.log("Model",car.model,"Price",car.price);
+			});
+			var filteredCars=cars.filter(function(car){
+				return car.price>500;
+			})
+			console.log(filteredCars);
+			
+			var mappedCars=cars.map(function(car){
+			
+				car.model=car.model.toUpperCase();
+				car.overPriced=car.price>500;
+				return car;
+			
+			});
+			console.log(mappedCars);
+			
+			
+			var sumOfPrice=cars.reduce(function(c,car){
+				return c+car.price;
+			},0);
+			console.log(sumOfPrice);
+			
+			var arr=[6,3,7,2];
+			arr.sort();
+			console.log(arr);
+			
+			
+			
+			
+			cars.sort(function(car1,car2){
+				if(car1.price<car2.price)return 1;
+				else if(car1.price>car2.price)return -1;
+				else return 0;
+			});
+			
+			console.log(cars)
+			
+			
+		</script>
+	</body>
+</html>
