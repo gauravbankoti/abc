@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+	<head>
+	</head>
+	<body>
+		<div ng-controller="ctrl">
+		
+			<div ng-repeat="i in arr">
+				Hello {{i}}
+			</div>
+			<div ng-repeat="i in objArray">
+				{{i.name}}, {{i.roll}}
+			</div>
+			
+			<table border=1>
+				<thead>
+					<tr>
+						<td>Name</td>
+						<td>Roll</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="i in objArray" >
+						<td>{{i.name}}</td>
+						<td>{{i.roll}}</td>
+					</tr>
+				</tbody>
+			</table>
+			
+			<form ng-submit="getData()">
+				Name : <input ng-model="obj.name" required><br />
+				Father Name : <input ng-model="obj.fatherName" required><br />
+				<input type="submit" value="Submit" ><br />
+				<br />
+				{{fatherName}}<br />
+				<p ng-bind="obj.name"></p>
+				<p>
+				{{obj.name}}
+				</p>
+				<span ng-if="obj.fatherName.length>5">{{obj.name}}</span><br />
+				<span ng-show="obj.fatherName.length>5">{{obj.name}}</span><br />
+				<span ng-hide="obj.fatherName.length>5">{{obj.name}}</span>
+				
+			</form>
+		</div>
+	
+		<script src="angular.min.js"></script>
+		<script src="index.js"></script>		
+	</body>
+</html>

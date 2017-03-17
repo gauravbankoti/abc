@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+	<head>
+	</head>
+	<body>
+		<div ng-controller="ctrl">
+		
+			<table border=1>
+				<thead>
+					<tr>
+						<td>Sr. No.</td>
+						<td>Name</td>
+						<td>Roll</td>
+						<td></td>
+						<td></td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="i in objArray" >
+						<td>{{$index+1}}</td>
+						<td>{{i.name}}</td>
+						<td>{{i.roll}}</td>
+						
+						<td><a href="#" ng-click="editObj(i)">Edit</a></td>
+						<td><a href="#" ng-click="deleteObj(i)">Delete</a></td>
+					</tr>
+				</tbody>
+			</table>
+			
+			<form ng-submit="getData()">
+				Name : <input ng-model="obj.name" required><br />
+				Roll : <input ng-model="obj.roll" required><br />
+				<input type="submit" value="Submit" ><br />			
+				
+			</form>
+		</div>
+	
+		<script src="angular.min.js"></script>
+		<script src="index2.js"></script>		
+	</body>
+</html>
