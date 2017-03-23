@@ -1,19 +1,32 @@
 var app=angular.module('myApp',[]);
 
-app.controller('ctrl',['$scope',function($scope){
-	$scope.getData=function(){
-		console.log($scope.obj);
-		
-		
+console.log("run")
+app.run(function(){
+	console.log("Hello")
+});
+
+
+app.controller('abc',['$scope','$rootScope',function($scope,$rootScope){
+	console.log("myController")
+	var name= ['gaurav', 'vyom','Mayank','amit','nishank'];
+
+	$scope.getinfo = function(){
+
+		console.log($scope.user)
+		$scope.details = $scope.user;
+		$scope.show1 = true;
+
+		$scope.names = name;
+
 	}
+
+
 	
-	$scope.arr=[1,2,3,4,5,6,7];
+}]);
+
+app.controller('xyz',['$scope','$rootScope',function($scope,$rootScope){
+	console.log("myController")
+	$rootScope.a = 2;
+	$scope.b = 5;
 	
-	
-	$scope.objArray=[
-		{name:'Nadeem',roll:1},
-		{name:'Gaurav',roll:2},
-		{name:'Amit',roll:3},
-		{name:'Nishank',roll:4}
-	];
 }]);

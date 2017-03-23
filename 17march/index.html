@@ -1,50 +1,32 @@
 <!DOCTYPE html>
 <html ng-app="myApp">
-	<head>
-	</head>
-	<body>
-		<div ng-controller="ctrl">
-		
-			<div ng-repeat="i in arr">
-				Hello {{i}}
-			</div>
-			<div ng-repeat="i in objArray">
-				{{i.name}}, {{i.roll}}
-			</div>
-			
-			<table border=1>
-				<thead>
-					<tr>
-						<td>Name</td>
-						<td>Roll</td>
-					</tr>
-				</thead>
-				<tbody>
-					<tr ng-repeat="i in objArray" >
-						<td>{{i.name}}</td>
-						<td>{{i.roll}}</td>
-					</tr>
-				</tbody>
-			</table>
-			
-			<form ng-submit="getData()">
-				Name : <input ng-model="obj.name" required><br />
-				Father Name : <input ng-model="obj.fatherName" required><br />
-				<input type="submit" value="Submit" ><br />
-				<br />
-				{{fatherName}}<br />
-				<p ng-bind="obj.name"></p>
-				<p>
-				{{obj.name}}
-				</p>
-				<span ng-if="obj.fatherName.length>5">{{obj.name}}</span><br />
-				<span ng-show="obj.fatherName.length>5">{{obj.name}}</span><br />
-				<span ng-hide="obj.fatherName.length>5">{{obj.name}}</span>
-				
-			</form>
-		</div>
-	
-		<script src="angular.min.js"></script>
-		<script src="index.js"></script>		
-	</body>
+
+<head>
+</head>
+
+<body>
+    <div ng-controller="abc">
+        <div class="row">
+            <form name="myform" ng-submit="getinfo()">
+                <input type="text" name="firstname" ng-model="user.firstname">
+                <input type="text" name="lastname" ng-model="user.lastname">
+                <input type="submit" value="click">
+            </form>
+        </div>
+        <div ng-if="show1">
+        <p> first name - {{details.firstname}}</p>
+        <p> last name - {{details.lastname}}</p>
+        </div>
+        <ul>
+        	<li ng-repeat="x in names">{{x}}</li>
+        </ul>
+    </div>
+    <div ng-controller="xyz">
+        <p>{{a}}</p>
+        <p>{{b}}</p>
+    </div>
+    <script src="angular.min.js"></script>
+    <script src="index.js"></script>
+</body>
+
 </html>
