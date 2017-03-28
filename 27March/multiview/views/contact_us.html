@@ -1,0 +1,20 @@
+<div>
+    <form name="contactForm" ng-submit="getData()"> 
+        Name :
+        <input name="name" ng-model="obj.name" required minLength="3">
+        <small class="text-danger" ng-show="contactForm.name.$invalid && contactForm.name.$touched && contactForm.name.$pristine">Required</small>
+        <small class="text-danger" ng-show="contactForm.name.$invalid && contactForm.name.$touched && contactForm.name.$error.minlength">Atleast 3 characters required</small>
+        <br /> Roll :
+        <input name="roll" ng-model="obj.roll" required>
+        <br />
+        <input type="submit" value="Submit" class="btn btn-primary" ng-disabled="contactForm.$invalid">
+        <br/> 
+        
+        <pre>
+        {{contactForm | json}}
+        </pre>
+        <pre>
+        {{obj | json}}
+        </pre>
+    </form>
+</div>

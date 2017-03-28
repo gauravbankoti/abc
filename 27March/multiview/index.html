@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+	<head>
+        <base href="/">
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/bootstrap-theme.min.css">
+	</head>
+	<body>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12" style="border:1px solid;">
+					<h1>My Site</h1>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-2" style="border:1px solid;">
+					<ul>
+						<li><a href="/home">Home</a></li>
+						<li><a href="/about_us">About Us</a></li>
+						<li><a href="/contact_us">Contact Us</a></li>
+						<li><a href="/filter">Filter Example</a></li>
+						<li><a href="/promise">Promise</a></li>
+						<li><a href="/currency">Currency Exchange</a></li>
+						<li><a href="/location">Location</a></li>
+					</ul>
+				</div>
+				<div class="col-md-10" style="border:1px solid;" ng-view>
+					
+				</div>
+			</div>
+		</div>
+		<script src="js/jquery.min.js"></script>
+		<script src="js/angular.min.js"></script>
+		<script src="js/angular-route.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<script src="js/index.js"></script>
+		
+	</body>
+</html>

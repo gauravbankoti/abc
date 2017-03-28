@@ -1,0 +1,8 @@
+<form ng-submit="submitForm()">
+    Indian Rupee <input type="number"  ng-model="inrValue" /><br />
+    <input type="submit" value="Convert" />
+</form>
+
+<div ng-repeat="(country,rate) in rates">
+   {{country}} - {{rate * inrValue | number:2}}
+</div>
