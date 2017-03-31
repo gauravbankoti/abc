@@ -1,0 +1,8 @@
+<form ng-submit="formSubmit()">
+    Name <input ng-model="user.name" required minlength="3"/><br />
+    Dob <input type="date" ng-model="user.dob" required/><br />
+    <input type="submit" value="Submit" />
+</form>
+
+Preview
+<contact-view user="user"></contact-view>
