@@ -10,6 +10,10 @@ app.config(['$routeProvider','$locationProvider',function($routeProvider,$locati
         templateUrl:'views/contact.html',
         controller:'ContactController'
     });
+    
+    $routeProvider.when('/c2',{
+        templateUrl:'views/test.html'
+    });
     $locationProvider.html5Mode(true);
 }]);
 
@@ -39,6 +43,13 @@ app.controller('ContactController',['$scope','$rootScope',function($scope,$rootS
         console.log('Shared Function Called');
     });
     */
+}]);
+
+app.controller('A',['$scope','$rootScope',function($scope,$rootScope){
+    $scope.c='Hello'
+}]);
+app.controller('B',['$scope','$rootScope',function($scope,$rootScope){
+    //$scope.c='Bye';
 }]);
 
 // contact-view
